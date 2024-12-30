@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif+Georgian:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply hidden;
+}
+
+body {
+  @apply overflow-x-hidden;
+}
+
+.glass {
+  background: rgba(24, 137, 203, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  @apply md:bg-transparent md:shadow-none md:blur-none md:border-none;
+}
+
+li {
+  @apply font-semibold duration-500 cursor-pointer hover:text-customBlue hover:translate-x-2 md:hover:translate-x-0 md:hover:translate-y-2;
+}
+
+i {
+  @apply font-semibold duration-500 cursor-pointer hover:text-customBlue;
+}
+
+.btn {
+  @apply py-2 px-10 font-semibold mt-5 bg-customBlue text-white duration-300 hover:bg-transparent hover:text-customBlue;
+}
+
+.star {
+  @apply font-light  hover:text-white;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  @apply bg-customBlue w-2 h-2 md:w-3 md:h-3 mt-5;
+}
+
+@layer utilities {
+  .loader {
+    width: 60px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side, #1889cb 90%, #ffffff00);
+    background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+    background-size: calc(100% / 3) 50%;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+}
