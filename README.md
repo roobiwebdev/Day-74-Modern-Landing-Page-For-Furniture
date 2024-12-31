@@ -26,3 +26,9 @@ It's built in Tailwind and JavaScript.
 Check it out👍
 
 [Live Link](https://roobiwebdev.github.io/Day-74-Modern-Landing-Page-For-Furniture/)
+
+
+![Furniture_Selling](https://github.com/user-attachments/assets/c7505e64-d70f-4401-92c1-7f2372a38147)
+
+
+
